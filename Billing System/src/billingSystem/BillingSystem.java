@@ -596,8 +596,8 @@ public class BillingSystem {
 					textFieldTotal.setText(total);
 
 
-					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.pChrome + Cost_Of_Material.pCooper
-							+ Cost_Of_Material.pPlastic));
+					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.Chrome + Cost_Of_Material.Cooper
+							+ Cost_Of_Material.Plastic));
 
 					textFieldCostOfLabor.setText(String.format("%.2f",Cost_Of_Material.Labour));
 					textFieldMileage.setText(String.format("%.2f",Cost_Of_Material.Travel));
@@ -625,8 +625,8 @@ public class BillingSystem {
 					textFieldTotal.setText(total);
 
 
-					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.pChrome + Cost_Of_Material.pCooper
-							+ Cost_Of_Material.pPlastic));
+					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.Chrome + Cost_Of_Material.Cooper
+							+ Cost_Of_Material.Plastic));
 
 					textFieldCostOfLabor.setText(String.format("%.2f",Cost_Of_Material.Labour));
 					textFieldMileage.setText(String.format("%.2f",Cost_Of_Material.Travel));
@@ -654,7 +654,7 @@ public class BillingSystem {
 					textFieldTotal.setText(total);
 
 
-					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.pChrome + Cost_Of_Material.pCooper
+					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.Chrome + Cost_Of_Material.Cooper
 							+ Cost_Of_Material.pPlastic));
 
 					textFieldCostOfLabor.setText(String.format("%.2f",Cost_Of_Material.Labour));
@@ -683,8 +683,8 @@ public class BillingSystem {
 					textFieldTotal.setText(total);
 
 
-					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.pChrome + Cost_Of_Material.pCooper
-							+ Cost_Of_Material.pPlastic));
+					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.Chrome + Cost_Of_Material.Cooper
+							+ Cost_Of_Material.Plastic));
 
 					textFieldCostOfLabor.setText(String.format("%.2f",Cost_Of_Material.Labour));
 					textFieldMileage.setText(String.format("%.2f",Cost_Of_Material.Travel));
@@ -712,7 +712,7 @@ public class BillingSystem {
 					textFieldTotal.setText(total);
 
 
-					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.pChrome + Cost_Of_Material.pCooper
+					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.Chrome + Cost_Of_Material.Cooper
 							+ Cost_Of_Material.pPlastic));
 
 					textFieldCostOfLabor.setText(String.format("%.2f",Cost_Of_Material.Labour));
@@ -741,8 +741,8 @@ public class BillingSystem {
 					textFieldTotal.setText(total);
 
 
-					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.pChrome + Cost_Of_Material.pCooper
-							+ Cost_Of_Material.pPlastic));
+					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.Chrome + Cost_Of_Material.Cooper
+							+ Cost_Of_Material.Plastic));
 
 					textFieldCostOfLabor.setText(String.format("%.2f",Cost_Of_Material.Labour));
 					textFieldMileage.setText(String.format("%.2f",Cost_Of_Material.Travel));
