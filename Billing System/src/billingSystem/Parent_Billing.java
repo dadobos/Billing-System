@@ -10,7 +10,7 @@ public class Parent_Billing {
 	public double Labour;
 	public double Travel;
 	public double Plastic;
-	public double Cooper;
+	public double Copper;
 	public double Chrome;
 	public double Tax;
 	public double VAT;
@@ -19,14 +19,14 @@ public class Parent_Billing {
 	public double pLabour = 43;
 	public double pTravel = 6.5;
 	public double pPlastic = 4.75;
-	public double pCooper = 9.8;
+	public double pCopper = 9.8;
 	public double pChrome = 7.5;
 	public double pTax = 0.90;
 	public double pVAT = 0.90;
 
 	//---------------------Cost-------------------------------
 	public double GetAmount() {
-		MaterialCost = Labour + Travel + Plastic + Cooper + Chrome;
+		MaterialCost = Labour + Travel + Plastic + Copper + Chrome;
 		return MaterialCost;
 	}
 	//---------------------Tax-------------------------------

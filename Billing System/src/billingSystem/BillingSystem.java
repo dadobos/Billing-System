@@ -31,7 +31,7 @@ public class BillingSystem {
 	private JTextField textFieldLabour;
 	private JTextField textFieldTravel;
 	private JTextField textFieldPlastic;
-	private JTextField textFieldCooper;
+	private JTextField textFieldCopper;
 	private JTextField textFieldChrome;
 	private JTextField textFieldCostOfMaterial;
 	private JTextField textFieldCostOfLabor;
@@ -84,8 +84,8 @@ public class BillingSystem {
 				textFieldPlastic.setEnabled(false);
 				textFieldPlastic.setText("0");
 
-				textFieldCooper.setEnabled(false);
-				textFieldCooper.setText("0");
+				textFieldCopper.setEnabled(false);
+				textFieldCopper.setText("0");
 
 				textFieldChrome.setEnabled(false);
 				textFieldChrome.setText("0");
@@ -187,7 +187,7 @@ public class BillingSystem {
 			}
 		});
 		textFieldLabour.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		textFieldLabour.setBounds(184, 55, 161, 20);
+		textFieldLabour.setBounds(184, 59, 161, 20);
 		panel_2.add(textFieldLabour);
 		textFieldLabour.setColumns(10);
 
@@ -225,8 +225,8 @@ public class BillingSystem {
 		textFieldPlastic.setBounds(184, 154, 161, 20);
 		panel_2.add(textFieldPlastic);
 
-		textFieldCooper = new JTextField();
-		textFieldCooper.addKeyListener(new KeyAdapter() {
+		textFieldCopper = new JTextField();
+		textFieldCopper.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyTyped(KeyEvent e) {
 				Child_Billing OnlyNumbers = new Child_Billing();
@@ -237,10 +237,10 @@ public class BillingSystem {
 				}
 			}
 		});
-		textFieldCooper.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		textFieldCooper.setColumns(10);
-		textFieldCooper.setBounds(184, 198, 161, 20);
-		panel_2.add(textFieldCooper);
+		textFieldCopper.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		textFieldCopper.setColumns(10);
+		textFieldCopper.setBounds(184, 198, 161, 20);
+		panel_2.add(textFieldCopper);
 
 		textFieldChrome = new JTextField();
 		textFieldChrome.addKeyListener(new KeyAdapter() {
@@ -287,7 +287,7 @@ public class BillingSystem {
 		textFieldCostOfMaterial = new JTextField();
 		textFieldCostOfMaterial.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		textFieldCostOfMaterial.setColumns(10);
-		textFieldCostOfMaterial.setBounds(670, 55, 178, 20);
+		textFieldCostOfMaterial.setBounds(670, 59, 178, 20);
 		panel_2.add(textFieldCostOfMaterial);
 
 		textFieldCostOfLabor = new JTextField();
@@ -383,23 +383,23 @@ public class BillingSystem {
 		cbxPlastic.setBounds(23, 137, 125, 45);
 		panel_2.add(cbxPlastic);
 
-		JCheckBox cbxCooper = new JCheckBox("Cooper");
-		cbxCooper.addActionListener(new ActionListener() {
+		JCheckBox cbxCopper = new JCheckBox("Copper");
+		cbxCopper.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(cbxCooper.isSelected()) {
-					textFieldCooper.setEnabled(true);
-					textFieldCooper.setText(null);
-					textFieldCooper.requestFocus();
+				if(cbxCopper.isSelected()) {
+					textFieldCopper.setEnabled(true);
+					textFieldCopper.setText(null);
+					textFieldCopper.requestFocus();
 
 				}else {
-					textFieldCooper.setEnabled(false);
-					textFieldCooper.setText("0");
+					textFieldCopper.setEnabled(false);
+					textFieldCopper.setText("0");
 				}
 			}
 		});
-		cbxCooper.setFont(new Font("Tahoma", Font.BOLD, 30));
-		cbxCooper.setBounds(23, 180, 133, 45);
-		panel_2.add(cbxCooper);
+		cbxCopper.setFont(new Font("Tahoma", Font.BOLD, 30));
+		cbxCopper.setBounds(23, 180, 133, 45);
+		panel_2.add(cbxCopper);
 
 		JCheckBox cbxChrome = new JCheckBox("Chrome");
 		cbxChrome.addActionListener(new ActionListener() {
@@ -510,7 +510,7 @@ public class BillingSystem {
 				//--------------------------------------------------------------
 				JCheckBox checker = null;
 				textReceipt.setText(null);
-				for(java.awt.Component q: panel_2.getComponents()) {
+				for(Component q: panel_2.getComponents()) {
 					if (q.getClass().toString().contains("javax.swing.JCheckBox")) {
 						checker = (JCheckBox)q;
 						checker.setSelected(false);
@@ -542,7 +542,7 @@ public class BillingSystem {
 						"Labour:\t\t\t" + textFieldLabour.getText() + "\n\n" +
 						"Travel:\t\t\t" + textFieldTravel.getText() + "\n\n" +
 						"Plastic:\t\t\t" + textFieldPlastic.getText() + "\n\n" +
-						"Cooper:\t\t\t" + textFieldCooper.getText() + "\n\n" +
+						"Copper:\t\t\t" + textFieldCopper.getText() + "\n\n" +
 						"Chrome:\t\t\t" + textFieldChrome.getText() + "\n\n" +
 						"VAT:\t\t\t" + textFieldVAT.getText() + "\n\n" +
 						"================================================\n"+
@@ -571,7 +571,7 @@ public class BillingSystem {
 				Cost_Of_Material.Labour = Cost_Of_Material.pLabour * Double.parseDouble(textFieldLabour.getText());
 				Cost_Of_Material.Travel = Cost_Of_Material.pTravel * Double.parseDouble(textFieldTravel.getText());
 				Cost_Of_Material.Plastic = Cost_Of_Material.pPlastic * Double.parseDouble(textFieldPlastic.getText());
-				Cost_Of_Material.Cooper = Cost_Of_Material.pCooper * Double.parseDouble(textFieldCooper.getText());
+				Cost_Of_Material.Copper = Cost_Of_Material.pCopper * Double.parseDouble(textFieldCopper.getText());
 				Cost_Of_Material.Chrome = Cost_Of_Material.pChrome * Double.parseDouble(textFieldChrome.getText());
 
 				//--------------------------------0%-----------------------------------------------------------
@@ -596,7 +596,7 @@ public class BillingSystem {
 					textFieldTotal.setText(total);
 
 
-					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.Chrome + Cost_Of_Material.Cooper
+					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.Chrome + Cost_Of_Material.Copper
 							+ Cost_Of_Material.Plastic));
 
 					textFieldCostOfLabor.setText(String.format("%.2f",Cost_Of_Material.Labour));
@@ -625,7 +625,7 @@ public class BillingSystem {
 					textFieldTotal.setText(total);
 
 
-					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.Chrome + Cost_Of_Material.Cooper
+					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.Chrome + Cost_Of_Material.Copper
 							+ Cost_Of_Material.Plastic));
 
 					textFieldCostOfLabor.setText(String.format("%.2f",Cost_Of_Material.Labour));
@@ -654,7 +654,7 @@ public class BillingSystem {
 					textFieldTotal.setText(total);
 
 
-					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.Chrome + Cost_Of_Material.Cooper
+					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.Chrome + Cost_Of_Material.Copper
 							+ Cost_Of_Material.pPlastic));
 
 					textFieldCostOfLabor.setText(String.format("%.2f",Cost_Of_Material.Labour));
@@ -683,7 +683,7 @@ public class BillingSystem {
 					textFieldTotal.setText(total);
 
 
-					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.Chrome + Cost_Of_Material.Cooper
+					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.Chrome + Cost_Of_Material.Copper
 							+ Cost_Of_Material.Plastic));
 
 					textFieldCostOfLabor.setText(String.format("%.2f",Cost_Of_Material.Labour));
@@ -712,7 +712,7 @@ public class BillingSystem {
 					textFieldTotal.setText(total);
 
 
-					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.Chrome + Cost_Of_Material.Cooper
+					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.Chrome + Cost_Of_Material.Copper
 							+ Cost_Of_Material.pPlastic));
 
 					textFieldCostOfLabor.setText(String.format("%.2f",Cost_Of_Material.Labour));
@@ -741,7 +741,7 @@ public class BillingSystem {
 					textFieldTotal.setText(total);
 
 
-					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.Chrome + Cost_Of_Material.Cooper
+					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.Chrome + Cost_Of_Material.Copper
 							+ Cost_Of_Material.Plastic));
 
 					textFieldCostOfLabor.setText(String.format("%.2f",Cost_Of_Material.Labour));
