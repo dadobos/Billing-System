@@ -158,12 +158,12 @@ public class BillingSystem {
 		cbxLabour.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				if(cbxLabour.isSelected()) {
+				if (cbxLabour.isSelected()) {
 					textFieldLabour.setEnabled(true);
 					textFieldLabour.setText(null);
 					textFieldLabour.requestFocus();
 
-				}else {
+				} else {
 					textFieldLabour.setEnabled(false);
 					textFieldLabour.setText("0");
 				}
@@ -178,7 +178,7 @@ public class BillingSystem {
 			@Override
 			public void keyTyped(KeyEvent e) {
 
-				Child_Billing OnlyNumbers = new Child_Billing();
+				Parent_Billing OnlyNumbers = new Parent_Billing();
 				try {
 					OnlyNumbers.NumbersOnly(e);
 				} catch (NumberFormatException ex) {
@@ -195,7 +195,7 @@ public class BillingSystem {
 		textFieldTravel.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyTyped(KeyEvent e) {
-				Child_Billing OnlyNumbers = new Child_Billing();
+				Parent_Billing OnlyNumbers = new Parent_Billing();
 				try {
 					OnlyNumbers.NumbersOnly(e);
 				} catch (NumberFormatException ex) {
@@ -212,7 +212,7 @@ public class BillingSystem {
 		textFieldPlastic.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyTyped(KeyEvent e) {
-				Child_Billing OnlyNumbers = new Child_Billing();
+				Parent_Billing OnlyNumbers = new Parent_Billing();
 				try {
 					OnlyNumbers.NumbersOnly(e);
 				} catch (NumberFormatException ex) {
@@ -229,7 +229,7 @@ public class BillingSystem {
 		textFieldCopper.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyTyped(KeyEvent e) {
-				Child_Billing OnlyNumbers = new Child_Billing();
+				Parent_Billing OnlyNumbers = new Parent_Billing();
 				try {
 					OnlyNumbers.NumbersOnly(e);
 				} catch (NumberFormatException ex) {
@@ -246,7 +246,7 @@ public class BillingSystem {
 		textFieldChrome.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyTyped(KeyEvent e) {
-				Child_Billing OnlyNumbers = new Child_Billing();
+				Parent_Billing OnlyNumbers = new Parent_Billing();
 				try {
 					OnlyNumbers.NumbersOnly(e);
 				} catch (NumberFormatException ex) {
@@ -350,12 +350,12 @@ public class BillingSystem {
 		JCheckBox cbxTravel = new JCheckBox("Travel");
 		cbxTravel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(cbxTravel.isSelected()) {
+				if (cbxTravel.isSelected()) {
 					textFieldTravel.setEnabled(true);
 					textFieldTravel.setText(null);
 					textFieldTravel.requestFocus();
 
-				}else {
+				} else {
 					textFieldTravel.setEnabled(false);
 					textFieldTravel.setText("0");
 				}
@@ -368,12 +368,12 @@ public class BillingSystem {
 		JCheckBox cbxPlastic = new JCheckBox("Plastic");
 		cbxPlastic.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(cbxPlastic.isSelected()) {
+				if (cbxPlastic.isSelected()) {
 					textFieldPlastic.setEnabled(true);
 					textFieldPlastic.setText(null);
 					textFieldPlastic.requestFocus();
 
-				}else {
+				} else {
 					textFieldPlastic.setEnabled(false);
 					textFieldPlastic.setText("0");
 				}
@@ -386,12 +386,12 @@ public class BillingSystem {
 		JCheckBox cbxCopper = new JCheckBox("Copper");
 		cbxCopper.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(cbxCopper.isSelected()) {
+				if (cbxCopper.isSelected()) {
 					textFieldCopper.setEnabled(true);
 					textFieldCopper.setText(null);
 					textFieldCopper.requestFocus();
 
-				}else {
+				} else {
 					textFieldCopper.setEnabled(false);
 					textFieldCopper.setText("0");
 				}
@@ -404,12 +404,12 @@ public class BillingSystem {
 		JCheckBox cbxChrome = new JCheckBox("Chrome");
 		cbxChrome.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(cbxChrome.isSelected()) {
+				if (cbxChrome.isSelected()) {
 					textFieldChrome.setEnabled(true);
 					textFieldChrome.setText(null);
 					textFieldChrome.requestFocus();
 
-				}else {
+				} else {
 					textFieldChrome.setEnabled(false);
 					textFieldChrome.setText("0");
 				}
@@ -482,11 +482,11 @@ public class BillingSystem {
 		JButton btnExit = new JButton("Exit");
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Child_Billing iExit = new Child_Billing();
+				Parent_Billing iExit = new Parent_Billing();
 				try {
 					iExit.iExitSystem();
 				} catch (NumberFormatException e) {
-					JOptionPane.showConfirmDialog(null	, "Billing system error");
+					JOptionPane.showConfirmDialog(null, "Billing system error");
 				}
 			}
 		});
@@ -500,19 +500,19 @@ public class BillingSystem {
 
 				JTextField clearText = null;
 
-				for(Component c: panel_2.getComponents()) {
+				for (Component c : panel_2.getComponents()) {
 					if (c.getClass().toString().contains("javax.swing.JTextField")) {
-						clearText = (JTextField)c;
+						clearText = (JTextField) c;
 						clearText.setText("");
 						clearText.setEnabled(false);
 					}
 				}
-				//--------------------------------------------------------------
+				// --------------------------------------------------------------
 				JCheckBox checker = null;
 				textReceipt.setText(null);
-				for(Component q: panel_2.getComponents()) {
+				for (Component q : panel_2.getComponents()) {
 					if (q.getClass().toString().contains("javax.swing.JCheckBox")) {
-						checker = (JCheckBox)q;
+						checker = (JCheckBox) q;
 						checker.setSelected(false);
 						chk0.setSelected(true);
 					}
@@ -527,7 +527,7 @@ public class BillingSystem {
 		btnRecipt.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent a) {
 
-				int refs = 1000 + (int)(Math.random()*9545);
+				int refs = 1000 + (int) (Math.random() * 9545);
 
 				Calendar timer = Calendar.getInstance();
 				timer.getTime();
@@ -535,27 +535,21 @@ public class BillingSystem {
 				tTime.format(timer.getTime());
 				SimpleDateFormat tDate = new SimpleDateFormat("dd-MM-yyyy");
 				tDate.format(timer.getTime());
-				//----------------------------Receipt----------------------------
+				// ----------------------------Receipt----------------------------
 
-				textReceipt.append("\tBilling System:\n" + "Reference:\t\t\t" + refs + 
-						"\n================================================\n" + 
-						"Labour:\t\t\t" + textFieldLabour.getText() + "\n\n" +
-						"Travel:\t\t\t" + textFieldTravel.getText() + "\n\n" +
-						"Plastic:\t\t\t" + textFieldPlastic.getText() + "\n\n" +
-						"Copper:\t\t\t" + textFieldCopper.getText() + "\n\n" +
-						"Chrome:\t\t\t" + textFieldChrome.getText() + "\n\n" +
-						"VAT:\t\t\t" + textFieldVAT.getText() + "\n\n" +
-						"================================================\n"+
+				textReceipt.append("\tBilling System:\n" + "Reference:\t\t\t" + refs
+						+ "\n================================================\n" + "Labour:\t\t\t"
+						+ textFieldLabour.getText() + "\n\n" + "Travel:\t\t\t" + textFieldTravel.getText() + "\n\n"
+						+ "Plastic:\t\t\t" + textFieldPlastic.getText() + "\n\n" + "Copper:\t\t\t"
+						+ textFieldCopper.getText() + "\n\n" + "Chrome:\t\t\t" + textFieldChrome.getText() + "\n\n"
+						+ "VAT:\t\t\t" + textFieldVAT.getText() + "\n\n"
+						+ "================================================\n" +
 
-						"Tax:\t\t\t" + textFieldTax.getText() + "\n\n" +
-						"Subtotal:\t\t\t" + textFieldSubtotal.getText() + "\n\n" +
-						"Total:\t\t\t" + textFieldTotal.getText() + "\n\n" +
+						"Tax:\t\t\t" + textFieldTax.getText() + "\n\n" + "Subtotal:\t\t\t" + textFieldSubtotal.getText()
+						+ "\n\n" + "Total:\t\t\t" + textFieldTotal.getText() + "\n\n" +
 
-						"================================================\n\n"+
-						tDate.format(timer.getTime()) + "\n"+
-						tTime.format(timer.getTime()) + "\n"+
-						"\nThank you!"
-						);		
+						"================================================\n\n" + tDate.format(timer.getTime()) + "\n"
+						+ tTime.format(timer.getTime()) + "\n" + "\nThank you!");
 			}
 		});
 		btnRecipt.setFont(new Font("Tahoma", Font.BOLD, 35));
@@ -567,16 +561,16 @@ public class BillingSystem {
 			public void actionPerformed(ActionEvent e) {
 
 				double iVAT, iTax, iSubtotal, iTotal;
-				Child_Billing Cost_Of_Material = new Child_Billing();
+				Parent_Billing Cost_Of_Material = new Parent_Billing();
 				Cost_Of_Material.Labour = Cost_Of_Material.pLabour * Double.parseDouble(textFieldLabour.getText());
 				Cost_Of_Material.Travel = Cost_Of_Material.pTravel * Double.parseDouble(textFieldTravel.getText());
 				Cost_Of_Material.Plastic = Cost_Of_Material.pPlastic * Double.parseDouble(textFieldPlastic.getText());
 				Cost_Of_Material.Copper = Cost_Of_Material.pCopper * Double.parseDouble(textFieldCopper.getText());
 				Cost_Of_Material.Chrome = Cost_Of_Material.pChrome * Double.parseDouble(textFieldChrome.getText());
 
-				//--------------------------------0%-----------------------------------------------------------
+				// --------------------------------0%-----------------------------------------------------------
 
-				if(chk0.isSelected()) {
+				if (chk0.isSelected()) {
 					iSubtotal = Cost_Of_Material.GetAmount();
 					iTax = Cost_Of_Material.cFindTax(iSubtotal);
 					iVAT = Cost_Of_Material.cVATTax(iTax);
@@ -595,18 +589,17 @@ public class BillingSystem {
 					String total = String.format("%.2f", iTotal);
 					textFieldTotal.setText(total);
 
+					textFieldCostOfMaterial.setText(String.format("%.2f",
+							Cost_Of_Material.Chrome + Cost_Of_Material.Copper + Cost_Of_Material.Plastic));
 
-					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.Chrome + Cost_Of_Material.Copper
-							+ Cost_Of_Material.Plastic));
-
-					textFieldCostOfLabor.setText(String.format("%.2f",Cost_Of_Material.Labour));
-					textFieldMileage.setText(String.format("%.2f",Cost_Of_Material.Travel));
+					textFieldCostOfLabor.setText(String.format("%.2f", Cost_Of_Material.Labour));
+					textFieldMileage.setText(String.format("%.2f", Cost_Of_Material.Travel));
 				}
-				//--------------------------------5%-----------------------------------------------------------
+				// --------------------------------5%-----------------------------------------------------------
 
-				if(chk5.isSelected()) {
+				if (chk5.isSelected()) {
 					iSubtotal = Cost_Of_Material.GetAmount();
-					iSubtotal = iSubtotal-((iSubtotal*5)/100);
+					iSubtotal = iSubtotal - ((iSubtotal * 5) / 100);
 					iTax = Cost_Of_Material.cFindTax(iSubtotal);
 					iVAT = Cost_Of_Material.cVATTax(iTax);
 					iTotal = iSubtotal + iTax + iVAT;
@@ -624,18 +617,17 @@ public class BillingSystem {
 					String total = String.format("%.2f", iTotal);
 					textFieldTotal.setText(total);
 
+					textFieldCostOfMaterial.setText(String.format("%.2f",
+							Cost_Of_Material.Chrome + Cost_Of_Material.Copper + Cost_Of_Material.Plastic));
 
-					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.Chrome + Cost_Of_Material.Copper
-							+ Cost_Of_Material.Plastic));
-
-					textFieldCostOfLabor.setText(String.format("%.2f",Cost_Of_Material.Labour));
-					textFieldMileage.setText(String.format("%.2f",Cost_Of_Material.Travel));
+					textFieldCostOfLabor.setText(String.format("%.2f", Cost_Of_Material.Labour));
+					textFieldMileage.setText(String.format("%.2f", Cost_Of_Material.Travel));
 				}
-				//--------------------------------10%-----------------------------------------------------------
+				// --------------------------------10%-----------------------------------------------------------
 
-				if(chk10.isSelected()) {
+				if (chk10.isSelected()) {
 					iSubtotal = Cost_Of_Material.GetAmount();
-					iSubtotal = iSubtotal-((iSubtotal*10)/100);
+					iSubtotal = iSubtotal - ((iSubtotal * 10) / 100);
 					iTax = Cost_Of_Material.cFindTax(iSubtotal);
 					iVAT = Cost_Of_Material.cVATTax(iTax);
 					iTotal = iSubtotal + iTax + iVAT;
@@ -653,18 +645,17 @@ public class BillingSystem {
 					String total = String.format("%.2f", iTotal);
 					textFieldTotal.setText(total);
 
+					textFieldCostOfMaterial.setText(String.format("%.2f",
+							Cost_Of_Material.Chrome + Cost_Of_Material.Copper + Cost_Of_Material.pPlastic));
 
-					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.Chrome + Cost_Of_Material.Copper
-							+ Cost_Of_Material.pPlastic));
-
-					textFieldCostOfLabor.setText(String.format("%.2f",Cost_Of_Material.Labour));
-					textFieldMileage.setText(String.format("%.2f",Cost_Of_Material.Travel));
+					textFieldCostOfLabor.setText(String.format("%.2f", Cost_Of_Material.Labour));
+					textFieldMileage.setText(String.format("%.2f", Cost_Of_Material.Travel));
 				}
-				//--------------------------------15%-----------------------------------------------------------
+				// --------------------------------15%-----------------------------------------------------------
 
-				if(chk15.isSelected()) {
+				if (chk15.isSelected()) {
 					iSubtotal = Cost_Of_Material.GetAmount();
-					iSubtotal = iSubtotal-((iSubtotal*15)/100);
+					iSubtotal = iSubtotal - ((iSubtotal * 15) / 100);
 					iTax = Cost_Of_Material.cFindTax(iSubtotal);
 					iVAT = Cost_Of_Material.cVATTax(iTax);
 					iTotal = iSubtotal + iTax + iVAT;
@@ -682,18 +673,17 @@ public class BillingSystem {
 					String total = String.format("%.2f", iTotal);
 					textFieldTotal.setText(total);
 
+					textFieldCostOfMaterial.setText(String.format("%.2f",
+							Cost_Of_Material.Chrome + Cost_Of_Material.Copper + Cost_Of_Material.Plastic));
 
-					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.Chrome + Cost_Of_Material.Copper
-							+ Cost_Of_Material.Plastic));
-
-					textFieldCostOfLabor.setText(String.format("%.2f",Cost_Of_Material.Labour));
-					textFieldMileage.setText(String.format("%.2f",Cost_Of_Material.Travel));
+					textFieldCostOfLabor.setText(String.format("%.2f", Cost_Of_Material.Labour));
+					textFieldMileage.setText(String.format("%.2f", Cost_Of_Material.Travel));
 				}
-				//--------------------------------20%-----------------------------------------------------------
+				// --------------------------------20%-----------------------------------------------------------
 
-				if(chk20.isSelected()) {
+				if (chk20.isSelected()) {
 					iSubtotal = Cost_Of_Material.GetAmount();
-					iSubtotal = iSubtotal-((iSubtotal*20)/100);
+					iSubtotal = iSubtotal - ((iSubtotal * 20) / 100);
 					iTax = Cost_Of_Material.cFindTax(iSubtotal);
 					iVAT = Cost_Of_Material.cVATTax(iTax);
 					iTotal = iSubtotal + iTax + iVAT;
@@ -711,18 +701,17 @@ public class BillingSystem {
 					String total = String.format("%.2f", iTotal);
 					textFieldTotal.setText(total);
 
+					textFieldCostOfMaterial.setText(String.format("%.2f",
+							Cost_Of_Material.Chrome + Cost_Of_Material.Copper + Cost_Of_Material.pPlastic));
 
-					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.Chrome + Cost_Of_Material.Copper
-							+ Cost_Of_Material.pPlastic));
-
-					textFieldCostOfLabor.setText(String.format("%.2f",Cost_Of_Material.Labour));
-					textFieldMileage.setText(String.format("%.2f",Cost_Of_Material.Travel));
+					textFieldCostOfLabor.setText(String.format("%.2f", Cost_Of_Material.Labour));
+					textFieldMileage.setText(String.format("%.2f", Cost_Of_Material.Travel));
 				}
-				//--------------------------------25%-----------------------------------------------------------
+				// --------------------------------25%-----------------------------------------------------------
 
-				if(chk25.isSelected()) {
+				if (chk25.isSelected()) {
 					iSubtotal = Cost_Of_Material.GetAmount();
-					iSubtotal = iSubtotal-((iSubtotal*25)/100);
+					iSubtotal = iSubtotal - ((iSubtotal * 25) / 100);
 					iTax = Cost_Of_Material.cFindTax(iSubtotal);
 					iVAT = Cost_Of_Material.cVATTax(iTax);
 					iTotal = iSubtotal + iTax + iVAT;
@@ -740,22 +729,22 @@ public class BillingSystem {
 					String total = String.format("%.2f", iTotal);
 					textFieldTotal.setText(total);
 
+					textFieldCostOfMaterial.setText(String.format("%.2f",
+							Cost_Of_Material.Chrome + Cost_Of_Material.Copper + Cost_Of_Material.Plastic));
 
-					textFieldCostOfMaterial.setText(String.format("%.2f",Cost_Of_Material.Chrome + Cost_Of_Material.Copper
-							+ Cost_Of_Material.Plastic));
-
-					textFieldCostOfLabor.setText(String.format("%.2f",Cost_Of_Material.Labour));
-					textFieldMileage.setText(String.format("%.2f",Cost_Of_Material.Travel));
+					textFieldCostOfLabor.setText(String.format("%.2f", Cost_Of_Material.Labour));
+					textFieldMileage.setText(String.format("%.2f", Cost_Of_Material.Travel));
 				}
-				//--------------------------------Enable Text-----------------------------------------------------------
+				// --------------------------------Enable
+				// Text-----------------------------------------------------------
 				JTextField clearText = null;
 
-				for(Component c: panel_2.getComponents()) {
+				for (Component c : panel_2.getComponents()) {
 					if (c.getClass().toString().contains("javax.swing.JTextField")) {
-						clearText = (JTextField)c;
+						clearText = (JTextField) c;
 						clearText.setEnabled(true);
 					}
-				}	
+				}
 			}
 
 		});
